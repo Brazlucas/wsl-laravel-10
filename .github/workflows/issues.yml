@@ -1,0 +1,16 @@
+name: Issues
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  help-wanted:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run issue-related job
+        run: |
+          # Your job steps related to issues
