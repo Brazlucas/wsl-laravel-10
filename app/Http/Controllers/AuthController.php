@@ -13,7 +13,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Autenticação bem-sucedida
-            return response()->json(['message' => 'Autenticação bem-sucedida']);
+            return response()->json(['message' => 'Autenticação bem-sucedida'], 200);
         }
 
         if (!$credentials) {

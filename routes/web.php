@@ -15,12 +15,3 @@ use App\Http\Controllers\AuthController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
-// Login routes
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
-
-// User routes
-Route::middleware(['auth', 'is_admin'])->group(function () {
-    Route::apiResource('users', UserController::class);
-});
