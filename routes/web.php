@@ -16,11 +16,4 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-// Login routes
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
-
-// User routes
-Route::middleware(['auth', 'is_admin'])->group(function () {
-    Route::apiResource('users', UserController::class);
-});
+// Não sei se aqui será adicionado rotas KKKKKK
