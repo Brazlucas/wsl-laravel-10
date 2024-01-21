@@ -76,5 +76,3 @@ php artisan key:generate
 
 Acessar o projeto
 [http://localhost:8989](http://localhost:8989)
-
-### Direitos reservados ao github.com/especializati
